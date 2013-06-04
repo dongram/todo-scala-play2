@@ -1,0 +1,41 @@
+@(todoList: List[TodoModel])
+
+@main("Test") {
+    <section id="todoapp">
+        <header id="header">
+            <h1>todos</h1>
+            <form action="/createTodo.isr" method="post" style="margin:0px;padding:0px">
+                <input type="hidden" name="name" value="ilzzang" >
+                <input id="new-todo" name="comment" placeholder="What needs to be done?" autofocus>
+            </form>
+        </header>
+        <section id="main">
+            <input id="toggle-all" type="checkbox">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul id="todo-list">
+            @for(data <- todoList) {
+                <li class="todo @(if(data.status==1) { "completed" })">
+                    <div class="view">
+                        <input class="_completed toggle" type="checkbox" @(if(data.status==1) "checked")>
+                        <label>@data.comment</label>
+                        <button class="destroy" onclick="location.href='/deleteTodo.isr?id=@data.id'"></button>
+                    </div>
+                    <form id="f_@data.id" action="/updateTodo.isr" method="post" style="margin:0px;padding:0px">
+                        <input type="hidden" name="id" value="@data.id">
+                        <input class="_status" type="hidden" name="status" value="@data.status">
+                        <input class="edit" name="comment" value="@data.comment">
+                    </form>
+                </li>
+            }
+            </ul>
+        </section>
+        <footer id="footer">
+            <span id="todo-count"><strong>@todoList.length </strong> item left</span>
+            <button id="clear-completed" onclick="location.href='/updateCompleteTodo.isr';">Clear completed</button>
+        </footer>
+    </section>
+    <footer id="info">
+        <p>Double-click to edit a todo</p>
+        <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+}
