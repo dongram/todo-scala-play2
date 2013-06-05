@@ -60,7 +60,7 @@ object TodoModel extends AnormExtension {
     var id = 0;
 
     DB.withConnection { implicit conn =>
-      val datetime = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss").format(todo.created_at.toDate) // "2013-05-29 11:36:59"
+      val datetime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(todo.created_at.toDate) // "2013-05-29 11:36:59"
 
       SQL(
         """
@@ -87,7 +87,7 @@ object TodoModel extends AnormExtension {
     Logger.info("updateTodo")
 
     DB.withConnection { implicit connection =>
-      val datetime = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss").format(todo.updated_at.toDate) // "2013-05-29 11:36:59"
+      val datetime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(todo.updated_at.toDate) // "2013-05-29 11:36:59"
       SQL(
         """
           |UPDATE Todo SET status={status}, comment={comment}, updated_at={updated_at} WHERE id={id}
@@ -148,7 +148,7 @@ object TodoModel extends AnormExtension {
     Logger.info("updateCompleteTodo")
 
     DB.withConnection { implicit connection =>
-      val datetime = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss").format(DateTime.now.toDate) // "2013-05-29 11:36:59"
+      val datetime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(DateTime.now.toDate) // "2013-05-29 11:36:59"
 
       SQL(
         """
