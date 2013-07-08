@@ -7,9 +7,9 @@ todo 예제 소스가 있으면 좋겠다는 생각이 들어서 간단한 sampl
 
 ## Todo
 
-* Ruby + Rails
+* (v) Ruby + Rails <https://github.com/dongram/todo-rails>
 
-* Scala + Play2
+* (v) Scala + Play2 <https://github.com/dongram/todo-scala-play2/>
 
 * NodeJS + CompoundJS
 
