@@ -1,8 +1,7 @@
 # Hello Todo !
-todomvc.com 를 보다가 language + framework 별로 todo 예제 소스가 있으면 좋겠다는 생각이 들어서 간단한 sample 만들고 공유 합니다. 
-
-여기서 공유하는 코드들은 best practice 가 아니며 단지 language와 framework를 사용해보려는 분들을 위한 맛보기 수준 입니다.
-
+todomvc.com 를 보다가 language + framework 별로 
+todo 예제 소스가 있으면 좋겠다는 생각이 들어서 간단한 sample 만들고 공유 합니다. 
+여기서 공유하는 코드들은 best practice는 아닙니다. 
 혹시나 참여 가능 하신 분들은 yuilsang@gmail.com 으로 메일 부탁 드립니다.
 
 
