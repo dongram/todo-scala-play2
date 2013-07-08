@@ -29,5 +29,3 @@ todo 예제 소스가 있으면 좋겠다는 생각이 들어서 간단한 sampl
 * cd todo-scala-play2 
 
 * play run 
-* 
-
